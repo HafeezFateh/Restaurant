@@ -1,0 +1,208 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Zeenath Restaurant</title>
+	<style type="text/css">
+		.hero{
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="hero">
+		<img src="zr.png">
+	</div>
+	<ul>
+		
+	</ul>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeenath Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        @media  (max-width:786px){
+        	header h1{
+        		font-size: 25px;
+        	}
+        }
+        header h1{
+
+        }
+        header {
+            background: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 90px;
+                right: 0;
+                background: white;
+                width: 100%;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .hero {
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?restaurant,food') center/cover;
+            padding: 100px 20px;
+            color: white;
+            position: relative;
+        }
+        .hero div {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 250px;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        img{
+        	height: auto;
+        	width: 100%;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zeenath Restaurant</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div>
+       <!--      <h2>Welcome to Zeenath Restaurant</h2>
+            <p>Experience the best food experience with us.</p> -->
+            <img src="zr.png">
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We serve delicious and fresh meals made with love. Our chefs use high-quality ingredients to craft the best dishes for you.</p>
+    </section>
+    
+    <section id="menu" class="section" style="background:#eaeaea;">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <h3>Grilled Chicken</h3>
+                <p>Freshly grilled Chicken</p>
+                <p><strong>Rs. 250/-</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Biryani Mutton</h3>
+                <p>Classic mutton biryani</p>
+                <p><strong>Rs. 200/-</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Biryani chicken</h3>
+                <p>Spicy chicken biryani</p>
+                <p><strong>Rs. 100/-</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <p>Contact us at: +91 39230419142 | info@zeenathrestaurant.com</p>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav-menu");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+                nav.style.flexDirection = "column";
+            }
+        }
+    </script>
+</body>
+</html>
